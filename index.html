@@ -17,6 +17,19 @@
             font-weight: bold;
         }
     </style>
+
+    <script>
+        // $(document).ready(function(){
+        //     $('ul').addClass('negrita');
+        // })
+
+        $(function(){
+            //Primer elemento de una lista
+            $('li:first-child').addClass('negrita');
+            //Ultimo elemento de una lista
+            $('li:last-child').addClass('textoVerde');
+        })
+    </script>
 </head>
 
 <body>
@@ -33,8 +46,8 @@
     </ul>
     
     <script>
-    jQuery('ul').addClass('textoVerde')
-     jQuery('li').addClass('negrita')
+    //jQuery('ul').addClass('textoVerde')
+     //jQuery('li').addClass('negrita')
     // jQuery('li'). css('font-weight','bold')
 
 
