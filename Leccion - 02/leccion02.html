@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 02 - Selectores y Encadenamiento</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+	<!-- Estilo para esta pagina -->
+	<style>
+		img {
+			width: 200px;
+			height: 200px;
+		}
+
+		hr {
+			margin-bottom: 60px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div class="container">
+
+		<h1>Selectores y Encadenamiento</h1>
+		<hr>
+
+		<div class="row">
+
+			<div class="col-sm-4">
+				<img src="img/nophoto.jpg" class="img-circle">
+			</div>
+
+			<div class="col-sm-5">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam aspernatur ab commodi tenetur,
+					quisquam.
+				</p>
+			</div>
+
+			<div class="col-sm-3">
+				<ul>
+					<li>Matemática</li>
+					<li>Programación</li>
+					<li>Análisis</li>
+					<li>Física</li>
+					<li>Geografía</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<script>
+
+			//TRES PASOS
+			//Le estamos diciendo que coja el atributo src de todas las img y agregale al atributo la nueva direccion de la imagen
+			// $("img").attr("src", "img/profesor.jpg")
+
+			// //Primero le quitamos la clase de bootstrap que tenia
+			// $("img").removeClass('img-circle');
+
+			// //Le damos una nueva clase
+			// $("img").addClass('img-thumbnail');
+
+
+			//UN PASO
+			//Le estamos diciendo que coja el atributo src de todas las img y agregale al atributo la nueva direccion de la imagen
+			$("img")
+				.attr("src", "img/alumnos.jpg")  //Cambia el src
+				.removeClass('img-circle')		//Borra la clase
+				.addClass('img-thumbnail');		//Agrega una clase nueva: Podemos agregar dos clases en una misma linea
+		</script>
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>
