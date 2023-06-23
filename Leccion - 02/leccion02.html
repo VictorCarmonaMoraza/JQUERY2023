@@ -22,6 +22,22 @@
 		hr {
 			margin-bottom: 60px;
 		}
+
+		.morado{
+			color: purple;
+		}
+		.rojo{
+			color: red;
+		}
+		.azul{
+			color: blue;
+		}
+		.verde{
+			color:green;
+		}
+		.naranja{
+			color: orange;;
+		}
 	</style>
 
 </head>
@@ -36,8 +52,9 @@
 
 		<div class="row">
 
-			<div class="col-sm-4">
+			<div class="col-sm-4 text-center">
 				<img src="img/nophoto.jpg" class="img-circle">
+				<h4>Victor Carmona</h4>
 			</div>
 
 			<div class="col-sm-5">
@@ -62,23 +79,28 @@
 
 		<script>
 
-			//TRES PASOS
-			//Le estamos diciendo que coja el atributo src de todas las img y agregale al atributo la nueva direccion de la imagen
-			// $("img").attr("src", "img/profesor.jpg")
-
-			// //Primero le quitamos la clase de bootstrap que tenia
-			// $("img").removeClass('img-circle');
-
-			// //Le damos una nueva clase
-			// $("img").addClass('img-thumbnail');
-
-
-			//UN PASO
-			//Le estamos diciendo que coja el atributo src de todas las img y agregale al atributo la nueva direccion de la imagen
+			//Manejo de las imagenes
 			$("img")
-				.attr("src", "img/alumnos.jpg")  //Cambia el src
-				.removeClass('img-circle')		//Borra la clase
-				.addClass('img-thumbnail');		//Agrega una clase nueva: Podemos agregar dos clases en una misma linea
+				.attr("src", "img/profesor.jpg")  //Cambia el src
+				.addClass('img-circle img-thumbnail');	
+				
+			//console.log("hijos",$(".col-sm-5").children("p").eq(0));	
+			//$("col-sm-5").children();
+
+			//Modificaciones al segundo bloque. Busca todos los parrafos que tengan las clase .col-sm-5  y cambia el texto
+			$(".col-sm-5").find("p").text("Soy Victor Carmona")
+
+			//Modificaciones al segundo bloque. Busca todos los parrafos que tengan las clase .col-sm-5  y cambia el texto por uno que acepta etiqeutas html
+			$(".col-sm-5").find("p").html("Soy <u>Victor</u> Carmona")
+
+			//Referencia a la lista ordenada. Damos color al segundo elemento de la lista
+			$("ul li")
+			.eq(0).addClass('morado').end()
+			.eq(1).addClass('rojo').end()
+			.eq(2).addClass('azul').end()
+			.eq(3).addClass('verde').end()
+			.eq(4).addClass('naranja').end()
+			
 		</script>
 
 	</div>
